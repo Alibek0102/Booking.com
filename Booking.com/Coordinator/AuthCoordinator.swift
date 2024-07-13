@@ -12,6 +12,15 @@ class AuthCoordinator: AuthCoordinatorProtocol {
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        
+        let navigationBarAppereance = UINavigationBarAppearance()
+        navigationBarAppereance.backgroundColor = AppColors.primaryColor
+        navigationBarAppereance.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: FontTypes.bold.getFont(size: 19)!
+        ]
+        self.navigationController.navigationBar.standardAppearance = navigationBarAppereance
+        self.navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppereance
     }
     
     func start() {
@@ -26,5 +35,5 @@ class AuthCoordinator: AuthCoordinatorProtocol {
     func startRegisterScreen() {
         
     }
-
+ 
 }

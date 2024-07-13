@@ -17,8 +17,8 @@ class MainCoordinator: MainCoordinatorProtocol {
     
     func start() {
         // remove after splash check
-//        self.startAuthFlow()
-        self.startAppFlow()
+        self.startAuthFlow()
+//        self.startAppFlow()
     }
     
     func startAuthFlow() {
